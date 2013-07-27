@@ -24,6 +24,9 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := krait
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
+# Headers
+TARGET_SPECIFIC_HEADER_PATH := device/asus/flo/kernel-headers
+
 TARGET_NO_BOOTLOADER := false
 
 BOARD_KERNEL_BASE := 0x80200000
