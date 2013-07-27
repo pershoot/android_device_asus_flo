@@ -28,3 +28,9 @@ TARGET_RECOVERY_FSTAB = device/asus/flo/recovery.fstab
 
 -include vendor/asus/flo/BoardConfigVendor.mk
 include device/asus/flo/BoardConfigCommon.mk
+
+# Try to build the kernel
+TARGET_KERNEL_SOURCE := kernel/asus/flo
+TARGET_KERNEL_CONFIG := cyanogenmod_flo_defconfig
+# Keep this as a fallback
+TARGET_PREBUILT_KERNEL := device/asus/flo/kernel
