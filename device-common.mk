@@ -20,7 +20,7 @@
 # Everything in this directory will become public
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/asus/flo-kernel/kernel
+LOCAL_KERNEL := device/asus/flo/kernel
 else
 LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
