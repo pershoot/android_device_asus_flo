@@ -81,6 +81,9 @@ TARGET_USES_C2D_COMPOSITON := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_RECOVERY_UI_LIB := librecovery_ui_flo
 
+# new fstab
+RECOVERY_FSTAB_VERSION := 2
+
 # no select button
 BOARD_HAS_NO_SELECT_BUTTON := true
 
