@@ -120,3 +120,6 @@ TARGET_USES_POST_PROCESSING := true
 TARGET_CUSTOM_DISPLAY_TUNING := true
 
 HAVE_ADRENO_SOURCE:= false
+
+# Preload bootanimation in to memory
+TARGET_BOOTANIMATION_PRELOAD := true
