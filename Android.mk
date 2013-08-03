@@ -57,6 +57,17 @@ $(SYMLINKS): $(LOCAL_INSTALLED_MODULE) $(LOCAL_PATH)/Android.mk
 		$(hide) ln -sf /$(TARGET_COPY_OUT_VENDOR)/firmware/$(TZAPPS_BINARY).mdt $(TARGET_OUT_ETC)/firmware
 ALL_DEFAULT_INSTALLED_MODULES += $(SYMLINKS)
 
+# symlink wcd9310 fw from audio in data/misc to system/etc/fw
+include $(CLEAR_VARS)
+COMMANDS = wcd9310
+SYMLINKS := $(addprefix $(TARGET_OUT_EXECUTABLES)/,$(COMMANDS))
+$(SYMLINKS): WCD9310_BINARY := wcd9310
+$(SYMLINKS): $(LOCAL_INSTALLED_MODULE) $(LOCAL_PATH)/Android.mk
+		$(hide) mkdir -p $(TARGET_OUT_ETC)/firmware/wcd9310
+		$(hide) ln -sf /$(TARGET_COPY_OUT_DATA)/misc/audio/$(WCD9310_BINARY)_anc.bin $(TARGET_OUT_ETC)/firmware/wcd9310
+		$(hide) ln -sf /$(TARGET_COPY_OUT_DATA)/misc/audio/mbhc.bin $(TARGET_OUT_ETC)/firmware/wcd9310/$(WCD9310_BINARY)_mbhc.bin
+ALL_DEFAULT_INSTALLED_MODULES += $(SYMLINKS)
+
 include $(call first-makefiles-under,$(LOCAL_PATH))
 
 endif
