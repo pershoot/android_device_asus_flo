@@ -43,6 +43,20 @@ LOCAL_SRC_FILES    := $(LOCAL_MODULE)
 LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/wifi
 include $(BUILD_PREBUILT)
 
+# symlink tzapps in vendor/fw to /system/etc/fw
+include $(CLEAR_VARS)
+COMMANDS = tzapps
+SYMLINKS := $(addprefix $(TARGET_OUT_EXECUTABLES)/,$(COMMANDS))
+$(SYMLINKS): TZAPPS_BINARY := tzapps
+$(SYMLINKS): $(LOCAL_INSTALLED_MODULE) $(LOCAL_PATH)/Android.mk
+		$(hide) mkdir -p $(TARGET_OUT_ETC)/firmware
+		$(hide) ln -sf /$(TARGET_COPY_OUT_VENDOR)/firmware/$(TZAPPS_BINARY).b00 $(TARGET_OUT_ETC)/firmware
+		$(hide) ln -sf /$(TARGET_COPY_OUT_VENDOR)/firmware/$(TZAPPS_BINARY).b01 $(TARGET_OUT_ETC)/firmware
+		$(hide) ln -sf /$(TARGET_COPY_OUT_VENDOR)/firmware/$(TZAPPS_BINARY).b02 $(TARGET_OUT_ETC)/firmware
+		$(hide) ln -sf /$(TARGET_COPY_OUT_VENDOR)/firmware/$(TZAPPS_BINARY).b03 $(TARGET_OUT_ETC)/firmware
+		$(hide) ln -sf /$(TARGET_COPY_OUT_VENDOR)/firmware/$(TZAPPS_BINARY).mdt $(TARGET_OUT_ETC)/firmware
+ALL_DEFAULT_INSTALLED_MODULES += $(SYMLINKS)
+
 include $(call first-makefiles-under,$(LOCAL_PATH))
 
 endif
