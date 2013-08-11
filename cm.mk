@@ -19,8 +19,8 @@
 
 
 # Boot Animation
-TARGET_SCREEN_WIDTH := 1920
-TARGET_SCREEN_HEIGHT := 1200
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1080
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
