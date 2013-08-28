@@ -67,6 +67,9 @@ on boot
     # Repeatable keys
     setprop ro.cwm.enable_key_repeat true
 
+    # Prefer tar + gzip
+    setprop ro.cwm.prefer.backup_format tgz
+
 service ueventd /sbin/ueventd
     critical
 
