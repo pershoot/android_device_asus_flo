@@ -119,6 +119,7 @@
 /system/lib/libsensor_reg.so
 /system/lib/libsensor_user_cal.so
 /system/lib/libstagefright_hdcp.so
+/system/lib/libWVphoneAPI.so
 /system/lib/libxml.so
 /system/vendor/firmware/a300_pfp.fw
 /system/vendor/firmware/a300_pm4.fw
@@ -167,6 +168,7 @@
 /system/vendor/firmware/wcnss.b04
 /system/vendor/firmware/wcnss.b05
 /system/vendor/firmware/wcnss.mdt
+/system/vendor/lib/drm/libdrmwvmplugin.so
 /system/vendor/lib/libdrmdecrypt.so
 /system/vendor/lib/libgemini.so
 /system/vendor/lib/libimage-jpeg-enc-omx-comp.so
@@ -189,3 +191,7 @@
 /system/vendor/lib/libmmstillomx.so
 /system/vendor/lib/liboemcamera.so
 /system/vendor/lib/libqomx_jpegenc.so
+/system/vendor/lib/libwvdrm_L1.so
+/system/vendor/lib/libwvm.so
+/system/vendor/lib/libWVStreamControlAPI_L1.so
+/system/vendor/lib/mediadrm/libwvdrmengine.so
