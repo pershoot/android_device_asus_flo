@@ -103,6 +103,9 @@ TARGET_RECOVERY_INITRC := device/asus/flo/recovery/init.rc
 # bigger font
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 
+# swipe based touch controls
+BOARD_RECOVERY_SWIPE := true
+
 # Webkit
 ENABLE_WEBGL := true
 TARGET_FORCE_CPU_UPLOAD := true
